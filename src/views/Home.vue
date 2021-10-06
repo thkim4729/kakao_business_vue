@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    <div class="home">
+        <core-appbar></core-appbar>
+        <core-view></core-view>
+        <core-footer></core-footer>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
+    name: 'Home',
+
+    components: {
+        CoreAppbar: () => import('@/components/core/Appbar.vue'),
+        CoreView: () => import('@/components/core/View.vue'),
+        CoreFooter: () => import('@/components/core/Footer.vue'),
+    },
 };
 </script>
