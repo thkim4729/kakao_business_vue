@@ -1,34 +1,15 @@
-# kakao_busuiness_vue
+# Genshin Impact Korea Clone Coding
 
-## Project setup
-```
-npm install
-```
+## Description
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+카카오 비즈니스 웹페이지 클론코딩 연습 작업물입니다.
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Link
 
-### Run your unit tests
-```
-npm run test:unit
-```
+https://thkim4729.github.io/kakao_busuiness_vue/
 
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
+### Source
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://business.kakao.com/

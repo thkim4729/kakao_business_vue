@@ -1,9 +1,9 @@
 <template>
     <div class="main" id="main">
-        <!-- <intro id="intro"></intro>
-        <about id="about" ref="about"></about>
-        <project id="project"></project>
-        <outro id="outro"></outro> -->
+        <visual id="intro"></visual>
+        <!-- <about id="about" ref="about"></about> -->
+        <!-- <project id="project"></project> -->
+        <!-- <outro id="outro"></outro> -->
 
         <!-- <div id="guide"></div> -->
 
@@ -20,7 +20,7 @@
 export default {
     name: 'Main',
     components: {
-        // Intro: () => import('@/components/main/Intro.vue'),
+        Visual: () => import('@/components/main/Visual.vue'),
         // About: () => import('@/components/main/About.vue'),
         // Project: () => import('@/components/main/Project.vue'),
         // Outro: () => import('@/components/main/Outro.vue'),
