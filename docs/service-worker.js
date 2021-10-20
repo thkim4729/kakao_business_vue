@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kakao_busuiness_vue/precache-manifest.6b3af41cd65e910ef35c9c0ebc2b234d.js"
+  "/kakao_busuiness_vue/precache-manifest.527507b5c239577b2a42cd0b0e9c422a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kakao_busuiness_vue"});
