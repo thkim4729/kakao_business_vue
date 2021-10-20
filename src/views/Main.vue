@@ -1,17 +1,18 @@
 <template>
     <div class="main" id="main">
-        <visual id="intro"></visual>
+        <visual id="visual"></visual>
+        <count id="count"></count>
         <!-- <about id="about" ref="about"></about> -->
         <!-- <project id="project"></project> -->
         <!-- <outro id="outro"></outro> -->
 
         <!-- <div id="guide"></div> -->
 
-        <div id="top" data-aos="fade-in">
+        <!-- <div id="top" data-aos="fade-in">
             <v-btn small fab dark color="#132448" @click="scrollToTop()">
                 <v-icon>mdi-chevron-up</v-icon>
             </v-btn>
-        </div>
+        </div> -->
         <!--top-->
     </div>
 </template>
@@ -21,6 +22,7 @@ export default {
     name: 'Main',
     components: {
         Visual: () => import('@/components/main/Visual.vue'),
+        Count: () => import('@/components/main/Count.vue'),
         // About: () => import('@/components/main/About.vue'),
         // Project: () => import('@/components/main/Project.vue'),
         // Outro: () => import('@/components/main/Outro.vue'),

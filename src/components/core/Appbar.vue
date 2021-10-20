@@ -18,7 +18,7 @@
                         </template>
 
                         <v-list>
-                            <a href="">
+                            <a href="#">
                                 <v-list-item v-for="(item, i) in items" :key="i">
                                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                                 </v-list-item>
@@ -33,9 +33,10 @@
 
                 <v-app-bar-nav-icon class="drawer" @click="drawer = true"></v-app-bar-nav-icon>
             </v-app-bar>
-
-            <!-- <div class="null"></div> -->
         </v-card>
+
+        <!-- <div class="null"></div> -->
+
         <v-navigation-drawer v-model="drawer" absolute temporary>
             <v-list nav dense>
                 <v-list-item-group v-model="group">
@@ -80,6 +81,8 @@ export default {
 };
 </script>
 <style lang="scss">
+.appbar {
+}
 .menu {
     position: relative;
 }
@@ -87,7 +90,7 @@ export default {
     margin: 0 32px 0 16px;
 }
 .drawer {
-    // display: none;
+    display: none;
 }
 .menu-btn {
     font-weight: bold;
