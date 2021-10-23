@@ -31,7 +31,7 @@
 
                 <v-btn text depressed outlined>로그인</v-btn>
 
-                <v-app-bar-nav-icon class="drawer" @click="drawer = true"></v-app-bar-nav-icon>
+                <!-- <v-app-bar-nav-icon class="drawer" @click="drawer = true"></v-app-bar-nav-icon> -->
             </v-app-bar>
         </v-card>
 
@@ -63,13 +63,13 @@ export default {
     data: () => ({
         drawer: false,
         group: null,
+        btns: ['광고', '서비스/도구', '파트너 지원'],
         items: [
             { title: 'Click Me' },
             { title: 'Click Me' },
             { title: 'Click Me' },
             { title: 'Click Me 2' },
         ],
-        btns: ['광고', '서비스/도구', '파트너 지원'],
     }),
     methods: {
         reload() {
@@ -82,6 +82,9 @@ export default {
 </script>
 <style lang="scss">
 .appbar {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 .menu {
     position: relative;

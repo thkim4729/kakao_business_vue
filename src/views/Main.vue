@@ -2,11 +2,9 @@
     <div class="main" id="main">
         <visual id="visual"></visual>
         <count id="count"></count>
-        <!-- <about id="about" ref="about"></about> -->
-        <!-- <project id="project"></project> -->
-        <!-- <outro id="outro"></outro> -->
-
-        <!-- <div id="guide"></div> -->
+        <join id="join"></join>
+        <start id="start"></start>
+        <info id="info"></info>
 
         <!-- <div id="top" data-aos="fade-in">
             <v-btn small fab dark color="#132448" @click="scrollToTop()">
@@ -23,9 +21,9 @@ export default {
     components: {
         Visual: () => import('@/components/main/Visual.vue'),
         Count: () => import('@/components/main/Count.vue'),
-        // About: () => import('@/components/main/About.vue'),
-        // Project: () => import('@/components/main/Project.vue'),
-        // Outro: () => import('@/components/main/Outro.vue'),
+        Join: () => import('@/components/main/Join.vue'),
+        Start: () => import('@/components/main/Start.vue'),
+        Info: () => import('@/components/main/Info.vue'),
     },
     computed: {},
     data() {
