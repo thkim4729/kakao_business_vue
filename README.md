@@ -8,7 +8,7 @@
 
 ### Link
 
-https://thkim4729.github.io/kakao_busuiness_vue/
+https://thkim4729.github.io/kakao_business_vue/
 
 ### Source
 
