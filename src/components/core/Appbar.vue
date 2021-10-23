@@ -21,6 +21,7 @@
                             <a href="#">
                                 <v-list-item v-for="(item, i) in items" :key="i">
                                     <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                    <v-list-item-title>{{ item.title }}</v-list-item-title>
                                 </v-list-item>
                             </a>
                         </v-list>
