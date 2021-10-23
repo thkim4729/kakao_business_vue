@@ -1,4 +1,4 @@
-# Genshin Impact Korea Clone Coding
+# Kakao Business Clone Coding
 
 ## Description
 
