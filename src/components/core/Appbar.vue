@@ -29,16 +29,17 @@
                 </div>
 
                 <v-spacer></v-spacer>
+                <div class="logIn">
+                    <v-btn text depressed outlined>로그인</v-btn>
+                </div>
 
-                <v-btn text depressed outlined>로그인</v-btn>
-
-                <!-- <v-app-bar-nav-icon class="drawer" @click="drawer = true"></v-app-bar-nav-icon> -->
+                <v-app-bar-nav-icon class="drawer-icon" @click="drawer = true"></v-app-bar-nav-icon>
             </v-app-bar>
         </v-card>
 
         <!-- <div class="null"></div> -->
 
-        <v-navigation-drawer v-model="drawer" absolute temporary>
+        <v-navigation-drawer v-model="drawer" absolute temporary height="100vh" right width="300px">
             <v-list nav dense>
                 <v-list-item-group v-model="group">
                     <v-list-item>
@@ -61,6 +62,7 @@
 </template>
 <script>
 export default {
+    name: 'AppBar',
     data: () => ({
         drawer: false,
         group: null,
@@ -93,13 +95,21 @@ export default {
 .logo {
     margin: 0 32px 0 16px;
 }
-.drawer {
-    display: none;
+.drawer-icon {
 }
 .menu-btn {
     font-weight: bold;
 }
-.null {
-    height: 64px;
+.text-center,
+.logIn {
+    display: none;
+}
+@media (min-width: 768px) {
+    .text-center,
+    .logIn {
+        display: block;
+    }
+    .drawer-icon {
+    }
 }
 </style>

@@ -6,57 +6,62 @@
                 <v-btn class="info-btn" x-large elevation="0"
                     >비즈니스 서비스 전체보기
                     <v-spacer></v-spacer>
-                    <v-icon x-large>mdi-arrow-right</v-icon>
+                    <v-icon large>mdi-arrow-right</v-icon>
                 </v-btn>
             </div>
         </div>
     </div>
 </template>
 <script>
-export default {};
+export default {
+    name: 'Info',
+    components: {},
+    computed: {},
+    data() {
+        return {};
+    },
+    mounted() {},
+    methods: {},
+};
 </script>
 <style lang="scss">
 .info {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    box-sizing: border-box;
-    background: url('../../assets/img/visual_cont5.acd0fad.png') no-repeat;
-    background-position: 50% 50%;
+    height: 276px;
+    background: url('../../assets/img/m_visual_cont5.1cc66f1.png');
     background-size: cover;
-    background-color: #f5f8ff;
+    background-position: 50% 50%;
     .info-inner {
-        max-width: 1160px;
-        margin: 0 auto;
-        padding: 76px 0;
-        box-sizing: border-box;
+        padding: 70px 0;
+        margin: 0 40px;
         .info-title {
             text-align: center;
+            width: 100%;
             p {
-                display: block;
-                margin-bottom: 40px;
-                font-size: 28px;
-                line-height: 28px;
+                width: 272px;
+                font-size: 18px;
+                line-height: 27px;
+                margin: 0 auto 26px;
                 color: #fff;
-                letter-spacing: -0.03em;
+                font-weight: bold;
             }
             .info-btn {
+                margin: 0 30px;
                 background-color: #02143f;
                 color: #fff;
-                width: 412px;
-                height: 80px;
-                font-size: 27px;
+                border: 1px solid transparent;
                 border-color: #d2d2d2;
-                border: 1px solid #d2d2d2;
-                border-radius: 13px;
-                letter-spacing: -0.03em;
-            }
-            .info-btn:hover {
-                background-color: #fff;
-                color: #222;
-                border-color: #d2d2d2;
+                border-radius: 9px;
+                width: 100%;
+                height: 56px;
+                margin: 0 auto;
+                padding: 0 20px;
+                font-size: 18px;
+                line-height: 54px;
+                font-weight: bold;
             }
         }
     }
+}
+@media (min-width: 768px) {
 }
 </style>

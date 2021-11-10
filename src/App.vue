@@ -30,7 +30,6 @@ li {
 * {
     margin: 0;
     padding: 0;
-    // font-family: 'NEXON Lv1 Gothic Light', sans-serif;
     font-family: 'NEXONFootballGothicLA1';
 }
 </style>

@@ -2,69 +2,86 @@
     <div class="visual">
         <hooper class="visual-wrap" :settings="hooperSettings">
             <slide class="slide">
-                <div class="slide-details">
-                    <video
-                        class="video"
-                        src="../../assets/video/main_visual_210525.mp4"
-                        autoplay
-                        muted
-                        loop
-                    ></video>
-                    <div class="video-words">
-                        <strong>비즈니스, 톡처럼 쉬워지다<br /></strong>
-                        <strong>카카오비즈니스</strong>
+                <div class="slide-details video-details">
+                    <div class="video_pc-wrap">
+                        <video
+                            class="video video_pc"
+                            src="../../assets/video/main_visual_210525.mp4"
+                            autoplay
+                            muted
+                            loop
+                        ></video>
                     </div>
-                </div>
-            </slide>
-            <slide class="slide">
-                <div class="slide-details">
-                    <div class="thumb thumb-01">
-                        <div class="thumb-inner">
-                            <!-- <img src="../../assets/img/transparent.png" alt="background" /> -->
-                            <div class="thumb-words">
-                                <div class="thumb-title">카카오페이 구매</div>
-                                <div class="thumb-details">
-                                    <strong>전국민이 가진<br /></strong>
-                                    <strong>카카오 계정과 결제 기반으로<br /></strong>
-                                    <strong>비즈니스가 더 쉬워집니다</strong>
-                                </div>
-                                <v-btn class="thumb-btn" color="primary" x-large
-                                    >카카오페이 구매 바로가기
-                                    <v-spacer></v-spacer>
-                                    <v-icon x-large>mdi-arrow-right</v-icon>
-                                </v-btn>
-                            </div>
+                    <div class="video_m-wrap">
+                        <img
+                            class="video video_m"
+                            src="../../assets/video/m_visual.gif"
+                            alt="비주얼_모바일"
+                        />
+                    </div>
+                    <div class="video-words-wrap">
+                        <div class="video-words_pc">
+                            <strong>
+                                비즈니스, 톡처럼 쉬워지다<br />
+                                카카오비즈니스
+                            </strong>
+                        </div>
+                        <div class="video-words_m">
+                            <strong>
+                                비즈니스,<br />
+                                톡처럼 쉬워지다<br />
+                                카카오비즈니스
+                            </strong>
                         </div>
                     </div>
                 </div>
             </slide>
             <slide class="slide">
-                <div class="slide-details">
-                    <div class="thumb thumb-02">
-                        <div class="thumb-inner">
-                            <!-- <img src="../../assets/img/transparent.png" alt="background" /> -->
-                            <div class="thumb-words">
-                                <div class="thumb-title">카카오구독ON</div>
-                                <div class="thumb-details">
-                                    <strong>10초면 계약 끝!<br /></strong>
-                                    <strong>렌탈 계약도 정기배송도<br /></strong>
-                                    <strong>더 쉽고 편리하게</strong>
-                                </div>
-                                <v-btn class="thumb-btn" color="primary" x-large
-                                    >카카오구독ON 바로가기
-                                    <v-spacer></v-spacer>
-                                    <v-icon x-large>mdi-arrow-right</v-icon>
-                                </v-btn>
+                <div class="slide-details info-details">
+                    <div class="thumb-inner">
+                        <div class="thumb-bg thumb-bg-01"></div>
+                        <div class="thumb-words">
+                            <div class="thumb-title">카카오페이 구매</div>
+                            <div class="thumb-details">
+                                <strong>전국민이 가진 카카오 계정과<br /></strong>
+                                <strong>결제 기반으로<br /></strong>
+                                <strong>비즈니스가 더 쉬워집니다</strong>
                             </div>
+                            <v-btn class="thumb-btn" color="primary" x-large
+                                >카카오페이 구매 바로가기
+                                <v-spacer></v-spacer>
+                                <v-icon large>mdi-arrow-right</v-icon>
+                            </v-btn>
                         </div>
                     </div>
                 </div>
             </slide>
-            <hooper-navigation slot="hooper-addons"></hooper-navigation>
+            <slide class="slide">
+                <div class="slide-details info-details">
+                    <div class="thumb-inner">
+                        <div class="thumb-bg thumb-bg-02"></div>
+                        <div class="thumb-words">
+                            <div class="thumb-title">카카오구독ON</div>
+                            <div class="thumb-details">
+                                <strong>10초면 계약 끝!<br /></strong>
+                                <strong>렌탈 계약도 정기배송도<br /></strong>
+                                <strong>더 쉽고 편리하게</strong>
+                            </div>
+                            <v-btn class="thumb-btn" color="primary" x-large
+                                >카카오구독ON 바로가기
+                                <v-spacer></v-spacer>
+                                <v-icon large>mdi-arrow-right</v-icon>
+                            </v-btn>
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <hooper-navigation slot="hooper-addons" class="page-navigation"></hooper-navigation>
+            <hooper-pagination slot="hooper-addons" class="page page-indicator"></hooper-pagination>
             <hooper-pagination
                 slot="hooper-addons"
+                class="page page-fraction"
                 mode="fraction"
-                class="page"
             ></hooper-pagination>
         </hooper>
     </div>
@@ -83,7 +100,7 @@ export default {
         return {
             hooperSettings: {
                 wheelControl: false,
-                autoPlay: true,
+                autoPlay: false,
                 playSpeed: 5000,
                 transition: 500,
                 // infiniteScroll: true,
@@ -101,92 +118,127 @@ export default {
 };
 </script>
 <style lang="scss">
-.visual {
-    // height: calc(100vh - 60px);
-    height: 100vh;
-    box-sizing: border-box;
-    .visual-wrap {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        min-width: 500px;
-        height: 100%;
-        .slide {
-            overflow: hidden;
-            .slide-details {
-                width: 100%;
-                height: 100%;
-                background: #f5f8ff;
-                .video {
-                    position: absolute;
-                    // top: -10%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    pointer-events: none;
-                    // transform: scale(1.5);
-                    overflow: hidden;
+.visual-wrap {
+    height: 640px;
+    // background-color: #02143f;
+    .slide {
+        .slide-details {
+        }
+        .video-details {
+            background-color: #02143f;
+            height: 100%;
+            .video_pc-wrap {
+                margin: 0 auto;
+                .video_pc {
+                    display: none;
                 }
-                .video-words {
-                    text-align: center;
-                    letter-spacing: -4px;
-                    position: absolute;
-                    top: 80%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+            }
+            .video_m-wrap {
+                text-align: center;
+                display: block;
+                // transform: translate(0, -15%) scale(0.7);
+                width: 100%;
+                min-width: 320px;
+                max-width: 360px;
+                margin: 0 auto;
+                .video_m {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .video-words-wrap {
+                width: 100%;
+                position: absolute;
+                left: auto;
+                top: auto;
+                right: auto;
+                bottom: 60px;
+                text-align: center;
+                .video-words_m {
                     strong {
                         color: #fff;
-                        font-size: 60px;
+                        font-size: 36px;
+                        line-height: 46px;
+                        letter-spacing: -2px;
                     }
                 }
-                .thumb {
-                    height: 100%;
-                    .thumb-inner {
-                        max-width: 1410px;
-                        margin: 0 auto;
-                        padding: 0 120px;
-                        .thumb-words {
-                            width: 100%;
-                            position: absolute;
-                            top: 50%;
-                            transform: translate(0, -50%);
-                            .thumb-title {
-                                font-size: 24px;
-                                letter-spacing: -1px;
-                            }
-                            .thumb-details {
-                                margin: 28px 0;
-                                font-size: 48px;
-                                letter-spacing: -5px;
-                            }
-                            .thumb-btn {
-                                width: 412px;
-                                height: 80px;
-                                border-radius: 12px;
-                                font-size: 24px;
-                                letter-spacing: -1px;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                }
-                .thumb-01 {
-                    background: url('../../assets/img/visual_thumb_01.png') center no-repeat;
-                }
-                .thumb-02 {
-                    background: url('../../assets/img/visual_thumb_02.png') center no-repeat;
+                .video-words_pc {
+                    display: none;
                 }
             }
         }
-        .page {
-            position: absolute;
-            right: 5%;
-            bottom: 5%;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 10px;
+        .info-details {
+            background-color: #f5f8ff;
+            height: 100%;
+            padding: 40px 0 0 0;
+            .thumb-inner {
+                width: 360px;
+                height: 100%;
+                margin: 0 auto;
+                .thumb-bg {
+                }
+                .thumb-bg-01 {
+                    background: url('../../assets/img/m_visual_02.png') 50% 50% no-repeat;
+                    position: absolute;
+                    width: 360px;
+                    min-width: 360px;
+                    min-height: 590px;
+                    margin: 0 auto;
+                    background-size: contain;
+                    transform: inherit;
+                }
+                .thumb-bg-02 {
+                    background: url('../../assets/img/m_visual_03.png') 50% 50% no-repeat;
+                    position: absolute;
+                    width: 360px;
+                    min-width: 360px;
+                    min-height: 590px;
+                    margin: 0 auto;
+                    background-size: contain;
+                    transform: inherit;
+                }
+            }
+            .thumb-words {
+                .thumb-title {
+                    margin: 0 0 8px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #828282;
+                    font-weight: bold;
+                }
+                .thumb-details {
+                    strong {
+                        font-size: 24px;
+                        line-height: 34px;
+                        color: #323232;
+                        letter-spacing: -2px;
+                    }
+                }
+                .thumb-btn {
+                    width: 360px;
+                    height: 56px;
+                    font-size: 18px;
+                    border-radius: 10px;
+                    position: absolute;
+                    bottom: 60px;
+                    font-weight: bold;
+                    letter-spacing: -1px;
+                }
+            }
         }
+    }
+    .page-fraction,
+    .page-navigation {
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .page-fraction,
+    .page-navigation {
+        display: block;
+    }
+    .page-indicator {
+        display: none;
     }
 }
 </style>
