@@ -121,9 +121,6 @@ export default {
     border-bottom: 1px solid #ebebeb;
     height: 56px;
 }
-.v-icon {
-    color: black !important;
-}
 @media (min-width: 768px) {
     .text-center,
     .logIn {
