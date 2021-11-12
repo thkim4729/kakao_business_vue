@@ -30,6 +30,7 @@ li {
 * {
     margin: 0;
     padding: 0;
-    font-family: 'NEXONFootballGothicLA1';
+    // font-family: 'NEXONFootballGothicLA1';
+    font-family: NotoSans-regular, sans-serif;
 }
 </style>

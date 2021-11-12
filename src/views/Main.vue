@@ -2,8 +2,8 @@
     <div class="main" id="main">
         <visual id="visual"></visual>
         <count id="count"></count>
-        <join id="join"></join>
-        <start id="start"></start>
+        <ecosystem id="ecosystem"></ecosystem>
+        <business id="start"></business>
         <info id="info"></info>
 
         <!-- <div id="top" data-aos="fade-in">
@@ -21,8 +21,8 @@ export default {
     components: {
         Visual: () => import('@/components/main/Visual.vue'),
         Count: () => import('@/components/main/Count.vue'),
-        Join: () => import('@/components/main/Join.vue'),
-        Start: () => import('@/components/main/Start.vue'),
+        Ecosystem: () => import('@/components/main/Ecosystem.vue'),
+        Business: () => import('@/components/main/Business.vue'),
         Info: () => import('@/components/main/Info.vue'),
     },
     computed: {},

@@ -24,4 +24,9 @@ export default {
 .null {
     height: 56px;
 }
+@media (min-width: 768px) {
+    .null {
+        height: 64px;
+    }
+}
 </style>

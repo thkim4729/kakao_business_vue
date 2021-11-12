@@ -115,5 +115,97 @@ export default {
     }
 }
 @media (min-width: 768px) {
+    .count {
+        position: relative;
+        width: 100%;
+        padding: 0 80px;
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 540px;
+        background: url('../../assets/img/count.png') center no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-color: #3846b1;
+        .count-inner {
+            position: relative;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 123px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            .count-words {
+                position: relative;
+                width: 50%;
+                z-index: 1;
+                margin: 0;
+                .words-title {
+                    margin-bottom: 18px;
+                    font-size: 24px;
+                    line-height: 34px;
+                    color: hsla(0, 0%, 100%, 0.7);
+                    font-weight: 500;
+                    letter-spacing: -2px;
+                }
+                .words-info {
+                    display: block;
+                    color: #fff;
+                    font-size: 40px;
+                    line-height: 58px;
+                    word-break: keep-all;
+                    letter-spacing: -2px;
+                }
+            }
+            .count-value {
+                width: 50%;
+                box-sizing: border-box;
+                margin: 0;
+                .value-inner {
+                    width: 600px;
+                    border-top: 1px solid hsla(0, 0%, 100%, 0.3);
+                    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+                    text-align: center;
+                    box-sizing: border-box;
+                    .value-title {
+                        display: table;
+                        width: 100%;
+                        span {
+                            display: table-cell;
+                            width: 50%;
+                            padding: 19px 0 20px;
+                            font-size: 20px;
+                            line-height: 29px;
+                            color: hsla(0, 0%, 100%, 0.8);
+                            border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+                            letter-spacing: -0.03em;
+                            box-sizing: border-box;
+                            letter-spacing: -2px;
+                        }
+                        span:first-child {
+                            border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+                        }
+                    }
+                    .value-desc {
+                        display: table;
+                        width: 100%;
+                        span {
+                            display: table-cell;
+                            width: 50%;
+                            padding: 32px 0 39px;
+                            font-size: 60px;
+                            line-height: 74px;
+                            color: #fff;
+                            box-sizing: border-box;
+                            letter-spacing: -2px;
+                        }
+                        span:first-child {
+                            border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 </style>

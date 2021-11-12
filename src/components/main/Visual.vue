@@ -3,30 +3,30 @@
         <hooper class="visual-wrap" :settings="hooperSettings">
             <slide class="slide">
                 <div class="slide-details video-details">
-                    <div class="video_pc-wrap">
+                    <div class="visual_pc">
                         <video
-                            class="video video_pc"
-                            src="../../assets/video/main_visual_210525.mp4"
+                            class="video"
+                            src="../../assets/video/visual_pc.mp4"
                             autoplay
                             muted
                             loop
                         ></video>
                     </div>
-                    <div class="video_m-wrap">
+                    <div class="visual_m">
                         <img
-                            class="video video_m"
-                            src="../../assets/video/m_visual.gif"
+                            class="video"
+                            src="../../assets/video/visual_m.gif"
                             alt="비주얼_모바일"
                         />
                     </div>
-                    <div class="video-words-wrap">
-                        <div class="video-words_pc">
+                    <div class="visual-words">
+                        <div class="visual-words_pc">
                             <strong>
                                 비즈니스, 톡처럼 쉬워지다<br />
                                 카카오비즈니스
                             </strong>
                         </div>
-                        <div class="video-words_m">
+                        <div class="visual-words_m">
                             <strong>
                                 비즈니스,<br />
                                 톡처럼 쉬워지다<br />
@@ -39,19 +39,27 @@
             <slide class="slide">
                 <div class="slide-details info-details">
                     <div class="thumb-inner">
-                        <div class="thumb-bg thumb-bg-01"></div>
+                        <div class="thumb-bg thumb-m-01"></div>
+                        <div class="thumb-bg thumb-pc-01"></div>
                         <div class="thumb-words">
-                            <div class="thumb-title">카카오페이 구매</div>
-                            <div class="thumb-details">
-                                <strong>전국민이 가진 카카오 계정과<br /></strong>
-                                <strong>결제 기반으로<br /></strong>
-                                <strong>비즈니스가 더 쉬워집니다</strong>
+                            <div class="words-inner">
+                                <div class="thumb-title">카카오페이 구매</div>
+                                <div class="thumb-details-m">
+                                    <strong>전국민이 가진 카카오 계정과<br /></strong>
+                                    <strong>결제 기반으로<br /></strong>
+                                    <strong>비즈니스가 더 쉬워집니다</strong>
+                                </div>
+                                <div class="thumb-details-pc">
+                                    <strong>전국민이 가진<br /></strong>
+                                    <strong>카카오 계정과 결제 기반으로<br /></strong>
+                                    <strong>비즈니스가 더 쉬워집니다</strong>
+                                </div>
+                                <v-btn class="thumb-btn" color="primary" x-large
+                                    >카카오페이 구매 바로가기
+                                    <v-spacer></v-spacer>
+                                    <v-icon large>mdi-arrow-right</v-icon>
+                                </v-btn>
                             </div>
-                            <v-btn class="thumb-btn" color="primary" x-large
-                                >카카오페이 구매 바로가기
-                                <v-spacer></v-spacer>
-                                <v-icon large>mdi-arrow-right</v-icon>
-                            </v-btn>
                         </div>
                     </div>
                 </div>
@@ -59,19 +67,27 @@
             <slide class="slide">
                 <div class="slide-details info-details">
                     <div class="thumb-inner">
-                        <div class="thumb-bg thumb-bg-02"></div>
+                        <div class="thumb-bg thumb-m-02"></div>
+                        <div class="thumb-bg thumb-pc-02"></div>
                         <div class="thumb-words">
-                            <div class="thumb-title">카카오구독ON</div>
-                            <div class="thumb-details">
-                                <strong>10초면 계약 끝!<br /></strong>
-                                <strong>렌탈 계약도 정기배송도<br /></strong>
-                                <strong>더 쉽고 편리하게</strong>
+                            <div class="words-inner">
+                                <div class="thumb-title">카카오구독ON</div>
+                                <div class="thumb-details-m">
+                                    <strong>10초면 계약 끝!<br /></strong>
+                                    <strong>렌탈 계약도 정기배송도<br /></strong>
+                                    <strong>더 쉽고 편리하게</strong>
+                                </div>
+                                <div class="thumb-details-pc">
+                                    <strong>10초면 계약 끝!<br /></strong>
+                                    <strong>렌탈 계약도 정기배송도<br /></strong>
+                                    <strong>더 쉽고 편리하게</strong>
+                                </div>
+                                <v-btn class="thumb-btn" color="primary" x-large
+                                    >카카오구독ON 바로가기
+                                    <v-spacer></v-spacer>
+                                    <v-icon large>mdi-arrow-right</v-icon>
+                                </v-btn>
                             </div>
-                            <v-btn class="thumb-btn" color="primary" x-large
-                                >카카오구독ON 바로가기
-                                <v-spacer></v-spacer>
-                                <v-icon large>mdi-arrow-right</v-icon>
-                            </v-btn>
                         </div>
                     </div>
                 </div>
@@ -95,15 +111,15 @@ import {
 } from 'hooper';
 import 'hooper/dist/hooper.css';
 export default {
-    name: 'Intro',
+    name: 'Visual',
     data() {
         return {
             hooperSettings: {
                 wheelControl: false,
-                autoPlay: false,
+                autoPlay: true,
                 playSpeed: 5000,
-                transition: 500,
-                // infiniteScroll: true,
+                transition: 750,
+                infiniteScroll: true,
             },
         };
     },
@@ -127,13 +143,12 @@ export default {
         .video-details {
             background-color: #02143f;
             height: 100%;
-            .video_pc-wrap {
-                margin: 0 auto;
-                .video_pc {
-                    display: none;
+            .visual_pc {
+                display: none;
+                .video {
                 }
             }
-            .video_m-wrap {
+            .visual_m {
                 text-align: center;
                 display: block;
                 // transform: translate(0, -15%) scale(0.7);
@@ -141,12 +156,12 @@ export default {
                 min-width: 320px;
                 max-width: 360px;
                 margin: 0 auto;
-                .video_m {
+                .video {
                     display: block;
                     width: 100%;
                 }
             }
-            .video-words-wrap {
+            .visual-words {
                 width: 100%;
                 position: absolute;
                 left: auto;
@@ -154,7 +169,7 @@ export default {
                 right: auto;
                 bottom: 60px;
                 text-align: center;
-                .video-words_m {
+                .visual-words_m {
                     strong {
                         color: #fff;
                         font-size: 36px;
@@ -162,7 +177,7 @@ export default {
                         letter-spacing: -2px;
                     }
                 }
-                .video-words_pc {
+                .visual-words_pc {
                     display: none;
                 }
             }
@@ -177,8 +192,8 @@ export default {
                 margin: 0 auto;
                 .thumb-bg {
                 }
-                .thumb-bg-01 {
-                    background: url('../../assets/img/m_visual_02.png') 50% 50% no-repeat;
+                .thumb-m-01 {
+                    background: url('../../assets/img/visual_m_pay.png') 50% 50% no-repeat;
                     position: absolute;
                     width: 360px;
                     min-width: 360px;
@@ -187,8 +202,8 @@ export default {
                     background-size: contain;
                     transform: inherit;
                 }
-                .thumb-bg-02 {
-                    background: url('../../assets/img/m_visual_03.png') 50% 50% no-repeat;
+                .thumb-m-02 {
+                    background: url('../../assets/img/visual_m_sub.png') 50% 50% no-repeat;
                     position: absolute;
                     width: 360px;
                     min-width: 360px;
@@ -196,6 +211,10 @@ export default {
                     margin: 0 auto;
                     background-size: contain;
                     transform: inherit;
+                }
+                .thumn-pc-01,
+                .thumb-pc-02 {
+                    display: none;
                 }
             }
             .thumb-words {
@@ -206,13 +225,17 @@ export default {
                     color: #828282;
                     font-weight: bold;
                 }
-                .thumb-details {
+                .thumb-details-m {
+                    display: block;
                     strong {
                         font-size: 24px;
                         line-height: 34px;
                         color: #323232;
                         letter-spacing: -2px;
                     }
+                }
+                .thumb-details-pc {
+                    display: none;
                 }
                 .thumb-btn {
                     width: 360px;
@@ -227,18 +250,190 @@ export default {
             }
         }
     }
+    .page-indicator {
+        display: block;
+    }
     .page-fraction,
     .page-navigation {
         display: none;
     }
 }
 @media (min-width: 768px) {
-    .page-fraction,
-    .page-navigation {
-        display: block;
-    }
-    .page-indicator {
-        display: none;
+    .visual-wrap {
+        position: relative;
+        height: calc(100vh - 64px);
+        .slide {
+            overflow: hidden;
+            .slide-details {
+            }
+            .video-details {
+                .visual_pc {
+                    display: block;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #0a2254;
+                    .video {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        right: auto;
+                        bottom: auto;
+                        width: 100%;
+                        min-width: 1382px;
+                        max-width: 1796px;
+                        margin-top: -60px;
+                        transform: translate(-50%, -50%) scale(1.5);
+                        padding: 60px 0 120px;
+                        background-color: #0a2254;
+                    }
+                }
+                .visual_m {
+                    display: none;
+                }
+                .visual-words {
+                    position: absolute;
+                    left: auto;
+                    top: auto;
+                    right: auto;
+                    bottom: 150px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    z-index: 2;
+                    text-align: center;
+                    .visual-words_m {
+                        display: none;
+                    }
+                    .visual-words_pc {
+                        display: block;
+                        strong {
+                            width: 100%;
+                            font-size: 60px;
+                            line-height: 85px;
+                            color: #fff;
+                            text-align: center;
+                            letter-spacing: -2px;
+                        }
+                    }
+                }
+            }
+            .info-details {
+                position: relative;
+                background-color: #f5f8ff;
+                .thumb-inner {
+                    width: 100%;
+                    .thumb-bg {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                        right: 0;
+                        transform: translate(0);
+                        min-width: 1600px;
+                        max-width: 1600px;
+                        margin: 0 auto;
+                        padding: 0;
+                        min-height: 940px;
+                        max-height: 940px;
+                        background-size: contain;
+                        background-position: 100%;
+                    }
+                    .thumb-pc-01 {
+                        background: url('../../assets/img/visual_pc_pay.png') 50% 50% no-repeat;
+                    }
+                    .thumb-pc-02 {
+                        background: url('../../assets/img/visual_pc_sub.png') 50% 50% no-repeat;
+                    }
+                    .thumb-m-01,
+                    .thumb-m-02 {
+                        display: none;
+                    }
+                }
+                .thumb-words {
+                    display: table;
+                    position: relative;
+                    bottom: 0;
+                    width: 100%;
+                    max-width: 1410px;
+                    height: 100%;
+                    margin: 0 auto;
+                    text-align: left;
+                    padding: 0 120px;
+                    box-sizing: border-box;
+                    .words-inner {
+                        display: table-cell;
+                        height: 100%;
+                        vertical-align: middle;
+                        .thumb-title {
+                            display: block;
+                            margin-bottom: 20px;
+                            font-size: 26px;
+                            line-height: 38px;
+                            color: #444;
+                            margin-top: -44px;
+                            font-weight: 500;
+                            letter-spacing: -2px;
+                        }
+                        .thumb-details-pc {
+                            display: block;
+                            strong {
+                                font-size: 50px;
+                                line-height: 72px;
+                                color: #323232;
+                                text-align: left;
+                                letter-spacing: -5px;
+                            }
+                        }
+                        .thumb-details-m {
+                            display: none;
+                        }
+                        .thumb-btn {
+                            margin-top: 100px;
+                            display: inline-block;
+                            position: relative;
+                            width: 440px;
+                            height: 80px;
+                            padding: 0 30px;
+                            font-size: 27px;
+                            line-height: 75px;
+                            background-color: #326edc;
+                            color: #fff;
+                            border-radius: 13px;
+                            box-sizing: border-box;
+                            border: 1px solid transparent;
+                            text-align: left;
+                            letter-spacing: -1px;
+                            z-index: 10;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        .page-indicator {
+            display: none;
+        }
+        .page-fraction,
+        .page-navigation {
+            display: block;
+            font-size: 20px;
+            letter-spacing: 16px;
+        }
+        .page-navigation {
+            button {
+                .icon {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+        .page-fraction {
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+        }
     }
 }
 </style>
